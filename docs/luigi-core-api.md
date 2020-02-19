@@ -37,7 +37,7 @@ Sets the configuration for Luigi initially. Can also be called at a later point 
 
 ##### Parameters
 
--   `configInput` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** : the Luigi Core configuration object
+-   `configInput` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** the Luigi Core configuration object
 
 ##### Examples
 
@@ -74,7 +74,7 @@ Returns the current active configuration
 Luigi.getConfig()
 ```
 
-Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** : the configuration object
+Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** configuration object
 
 #### configChanged
 
@@ -82,7 +82,7 @@ Tells Luigi that the configuration has been changed. Luigi will update the appli
 
 ##### Parameters
 
--   `scope` **...[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** : one or more scope selectors specifying what parts of the configuration were changed. If no scope selector is provided, the whole configuration is considered changed.<p>
+-   `scope` **...[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** one or more scope selectors specifying what parts of the configuration were changed. If no scope selector is provided, the whole configuration is considered changed.<p>
     The supported scope selectors are:
     <p>
     <ul>
@@ -102,7 +102,7 @@ Gets value of the given property on Luigi config object. Target can be a value o
 
 ##### Parameters
 
--   `property` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** : the object traversal path
+-   `property` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the object traversal path
 
 ##### Examples
 
@@ -118,7 +118,7 @@ Function return true if the property value is equal true or 'true'. Otherwise th
 
 ##### Parameters
 
--   `property` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** : the object traversal path
+-   `property` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the object traversal path
 
 ##### Examples
 
@@ -134,7 +134,7 @@ If the value is not a Promise it is wrapped to a Promise so that the returned va
 
 ##### Parameters
 
--   `property` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** : the object traversal path
+-   `property` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the object traversal path
 -   `parameters` **any** optional parameters that are used if the target is a function
 
 ##### Examples
@@ -149,7 +149,7 @@ Luigi.getConfigValueAsync('navigation.contextSwitcher.options')
 
 Detects if authorization is enabled via configuration.
 
-Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** : returns true if authorization is enabled. Otherwise returns false.
+Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** returns true if authorization is enabled. Otherwise returns false.
 
 **Meta**
 
@@ -173,7 +173,7 @@ Returns the container of the Luigi content.
 Luigi.elements().getLuigiContainer();
 ```
 
-Returns **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)** the DOM element that wraps the Luigi content.
+Returns **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)** the DOM element that wraps the Luigi content
 
 **Meta**
 
@@ -189,7 +189,7 @@ Returns the shellbar component.
 Luigi.elements().getShellbar();
 ```
 
-Returns **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)** the shellbar DOM element.
+Returns **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)** the shellbar DOM element
 
 **Meta**
 
@@ -205,7 +205,7 @@ Returns the shellbar actions component.
 Luigi.elements().getShellbarActions();
 ```
 
-Returns **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)** the shellbar actions DOM element.
+Returns **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)** the shellbar actions DOM element
 
 **Meta**
 
@@ -237,7 +237,7 @@ Returns all micro frontend iframes including the iframe from the modal if it exi
 Luigi.elements().getMicrofrontendIframes();
 ```
 
-Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)>** an array of all micro frontend iframes from the DOM.
+Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)>** an array of all micro frontend iframes from the DOM
 
 **Meta**
 
@@ -254,7 +254,7 @@ If there is a modal, which includes the micro frontend iframe, the function retu
 Luigi.elements().getCurrentMicrofrontendIframe();
 ```
 
-Returns **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)** the active micro frontend iframe DOM element.
+Returns **[HTMLElement](https://developer.mozilla.org/docs/Web/HTML/Element)** the active micro frontend iframe DOM element
 
 **Meta**
 
@@ -414,7 +414,7 @@ Opens a view in a modal. You can specify the modal's title and size. If you don'
 ##### Parameters
 
 -   `path` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** navigation path
--   `modalSettings` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** opens a view in a modal. Use these settings to configure the modal's title and size
+-   `modalSettings` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** opens a view in a modal. Use these settings to configure the modal's title and size
     -   `modalSettings.title` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** modal title. By default, it is the node label. If there is no label, it is left empty
     -   `modalSettings.size` **(`"l"` \| `"m"` \| `"s"`)** size of the modal (optional, default `"l"`)
 
@@ -505,7 +505,7 @@ Discards the active view and navigates back to the last visited view. Works with
 
 ##### Parameters
 
--   `goBackValue` **any** data that is passed in the **goBackContext** field to the last visited view when using preserved views.
+-   `goBackValue` **any** data that is passed in the **goBackContext** field to the last visited view when using preserved views
 
 ##### Examples
 
@@ -621,7 +621,7 @@ Use Luigi.elements().getMicrofrontends() to get the iframe id.
 ##### Parameters
 
 -   `microfrontendId` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the id of the micro frontend
--   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object containing data to be sent to the micro frontend to process it further. This object is set as an input parameter of the custom message listener on the micro frontend side.
+-   `message` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** an object containing data to be sent to the micro frontend to process it further. This object is set as an input parameter of the custom message listener on the micro frontend side
     -   `message.id` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the id of the message
     -   `message.MY_DATA_FIELD` **any** any other message data field
 
@@ -667,8 +667,8 @@ Shows an alert.
     -   `settings.links` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** provides links data
         -   `settings.links.LINK_KEY` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** object containing the data for a particular link. To properly render the link in the alert message refer to the description of the **settings.text** parameter
             -   `settings.links.LINK_KEY.text` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** text which replaces the link identifier in the alert content
-            -   `settings.links.LINK_KEY.url` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** url to navigate when you click the link. Currently, only internal links are supported in the form of relative or absolute paths.
-    -   `settings.closeAfter` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** (optional) time in milliseconds that tells Luigi when to close the Alert automatically. If not provided, the Alert will stay on until closed manually. It has to be greater than `100`.
+            -   `settings.links.LINK_KEY.url` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** url to navigate when you click the link. Currently, only internal links are supported in the form of relative or absolute paths
+    -   `settings.closeAfter` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** (optional) time in milliseconds that tells Luigi when to close the Alert automatically. If not provided, the Alert will stay on until closed manually. It has to be greater than `100`
 
 ##### Examples
 
@@ -691,7 +691,7 @@ Luigi
  });
 ```
 
-Returns **[promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** which is resolved when the alert is dismissed.
+Returns **[promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** which is resolved when the alert is dismissed
 
 **Meta**
 
@@ -703,7 +703,7 @@ Shows a confirmation modal.
 
 ##### Parameters
 
--   `settings` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** the settings of the confirmation modal. If you don't provide any value for any of the fields, a default value is used
+-   `settings` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** the settings of the confirmation modal. If you do not provide any value for any of the fields, a default value is used
     -   `settings.header` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the content of the modal header (optional, default `"Confirmation"`)
     -   `settings.body` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the content of the modal body (optional, default `"Are you sure you want to do this?"`)
     -   `settings.buttonConfirm` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the label for the modal confirm button (optional, default `"Yes"`)
