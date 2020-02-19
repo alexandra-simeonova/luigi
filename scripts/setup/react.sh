@@ -2,11 +2,11 @@
 echo ""
 echo "Installing Luigi with React specification"
 echo ""
-read -p "Luigi project folder name: " folder 
-echo "Creating luigified react app: " $folder 
+read -p "Luigi project folder name: " folder
+echo "Creating luigified react app: " $folder
 
 # create sample react app
-npx create-react-app $folder && cd $folder 
+npx create-react-app $folder && cd $folder
 
 # eject project to customize webpack configs
 echo yes | npm run eject
